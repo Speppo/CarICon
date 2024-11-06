@@ -2,7 +2,7 @@ import pandas as pd
 from pyswip import Prolog
 import pandas as pd
 
-dataset_path = "C:/Users/Speppo/PycharmProjects/CarICon/datasets/clustered.csv"
+dataset_path = "datasets/clustered.csv"
 
 # Costrusce FACTS.PL
 def load_data_in_kb():
