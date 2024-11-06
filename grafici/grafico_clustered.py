@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Carica i dati dal primo file CSV
-df1 = pd.read_csv("C:/Users/Speppo/PycharmProjects/CarICon/risultati/risultati_adaboost_clustered.csv")
+df1 = pd.read_csv("risultati/risultati_adaboost_clustered.csv")
 
 # Seleziona il valore della colonna mean_test_neg_mean_squared_error con rank_test_neg_mean_squared_error uguale a 1 e lo converte in valore positivo
 y1 = abs(df1.loc[df1['rank_test_neg_mean_squared_error'] == 1, 'mean_test_neg_mean_squared_error'].values[0])
@@ -11,7 +11,7 @@ y1 = abs(df1.loc[df1['rank_test_neg_mean_squared_error'] == 1, 'mean_test_neg_me
 x1 = df1.loc[df1['rank_test_neg_mean_squared_error'] == 1, 'params'].values[0]
 
 # Carica i dati dal secondo file CSV
-df2 = pd.read_csv("C:/Users/Speppo/PycharmProjects/CarICon/risultati/risultati_decision_tree_clustered.csv")
+df2 = pd.read_csv("risultati/risultati_decision_tree_clustered.csv")
 
 # Seleziona il valore della colonna mean_test_neg_mean_squared_error con rank_test_neg_mean_squared_error uguale a 1 e lo converte in valore positivo
 y2 = abs(df2.loc[df2['rank_test_neg_mean_squared_error'] == 1, 'mean_test_neg_mean_squared_error'].values[0])
@@ -20,7 +20,7 @@ y2 = abs(df2.loc[df2['rank_test_neg_mean_squared_error'] == 1, 'mean_test_neg_me
 x2 = df2.loc[df2['rank_test_neg_mean_squared_error'] == 1, 'params'].values[0]
 
 # Carica i dati dal terzo file CSV
-df3 = pd.read_csv("C:/Users/Speppo/PycharmProjects/CarICon/risultati/risultati_knn_clustered.csv")
+df3 = pd.read_csv("risultati/risultati_knn_clustered.csv")
 
 # Seleziona il valore della colonna mean_test_neg_mean_squared_error con rank_test_neg_mean_squared_error uguale a 1 e lo converte in valore positivo
 y3 = abs(df3.loc[df3['rank_test_neg_mean_squared_error'] == 1, 'mean_test_neg_mean_squared_error'].values[0])
@@ -29,7 +29,7 @@ y3 = abs(df3.loc[df3['rank_test_neg_mean_squared_error'] == 1, 'mean_test_neg_me
 x3 = df3.loc[df3['rank_test_neg_mean_squared_error'] == 1, 'params'].values[0]
 
 # Carica i dati dal quarto file CSV
-df4 = pd.read_csv("C:/Users/Speppo/PycharmProjects/CarICon/risultati/risultati_random_forest_clustered.csv")
+df4 = pd.read_csv("risultati/risultati_random_forest_clustered.csv")
 
 # Seleziona il valore della colonna mean_test_neg_mean_squared_error con rank_test_neg_mean_squared_error uguale a 1 e lo converte in valore positivo
 y4 = abs(df4.loc[df4['rank_test_neg_mean_squared_error'] == 1, 'mean_test_neg_mean_squared_error'].values[0])
