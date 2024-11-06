@@ -6,7 +6,6 @@ from sklearn.preprocessing import OrdinalEncoder
 from sklearn.feature_selection import f_classif
 import matplotlib.pyplot as plt
 
-# Fonte: https://jtemporal.com/kmeans-and-elbow-method/#:~:text=import%20seaborn%20as%20sns%20from%20sklearn.cluster%20import%20KMeans,of%20clusters%20kmeans%20%3D%20KMeans%28n_clusters%3Dn%29%20clusters%20%3D%20kmeans.fit_predict%28df%29
 def optimal_number_of_clusters(sse, range_bottom, range_top):
     x1, y1 = range_bottom, sse[0]
     x2, y2 = range_top, sse[len(sse)-1]
@@ -67,10 +66,10 @@ print("Numero ottimale di cluster:", best_k)
 kmeans = KMeans(n_clusters=best_k, random_state=0, n_init=10)
 kmeans.fit(X)
 
-# Aggiunta delle etichette di cluster al dataset
+# Aggiunta etichette di cluster al dataset
 data['cluster'] = kmeans.labels_
 
-# Modifica delle etichette di cluster
+# Modifica etichette di cluster
 data['cluster'] = data['cluster'].apply(lambda x: x + 1)
 
 #data[features] = data2[features]
