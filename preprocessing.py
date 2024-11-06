@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Carica il dataset
-dataset = pd.read_csv('C:/Users/Speppo/PycharmProjects/CarICon/datasets/Car_Dataset_1945-2020.csv', dtype=str)
+dataset = pd.read_csv('datasets/Car_Dataset_1945-2020.csv', dtype=str)
 dataset = dataset.rename(columns={'Modle': 'Model'})
 
 # Elimino caratteristiche che non servono ai fini dell'interrogazione
